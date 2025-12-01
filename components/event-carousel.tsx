@@ -1,11 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
-// Image import is no longer needed here if not used elsewhere in this file
-// import Image from "next/image"
+import Image from "next/image"
 import { ChevronLeft, ChevronRight, Tag, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardTitle, CardContent } from "@/components/ui/card" // Added CardContent
+import { Card, CardTitle, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 
@@ -15,8 +14,8 @@ const events = [
     description:
       "Join us for our popular comfort food nights! We offer a choice of three different meals, typically our favorite comfort foods. Each meal can be complemented with an optional salad or dessert. Pre-orders recommended!",
     timing: "First Monday of each month, 4:00 PM - 7:00 PM",
-    image: "/family-style-dinner.png", // Kept in data structure for potential other uses
-    alt: "Family style dinner table with various comfort foods",
+    image: "/comfort-food-menu-dec-1.png",
+    alt: "Comfort Food Night menu featuring meatloaf, lasagna, and pork ribs",
     category: "Monthly Special",
     link: "tel:+14013150777",
     linkText: "Call to Pre-order",
@@ -50,7 +49,7 @@ export default function EventCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % events.length)
-    }, 7000) // Auto-scroll every 7 seconds
+    }, 7000)
     return () => clearInterval(interval)
   }, [])
 
@@ -71,35 +70,45 @@ export default function EventCarousel() {
         >
           {events.map((event, index) => (
             <Card key={index} className="min-w-full bg-card border-border">
-              {/* Removed the grid layout that separated image and text */}
-              <CardContent className="p-6 flex flex-col justify-center min-h-[250px] md:min-h-[300px]">
-                {" "}
-                {/* Added CardContent and min-height for consistency */}
-                {event.status && (
-                  <Badge variant="secondary" className="absolute top-4 right-4 bg-primary text-primary-foreground">
-                    {event.status}
-                  </Badge>
-                )}
-                <CardTitle className="text-2xl font-bold text-foreground mb-3">{event.title}</CardTitle>
-                <div className="flex items-center text-sm text-muted-foreground mb-1">
-                  <Tag className="h-4 w-4 mr-2 text-primary" />
-                  <span>{event.category}</span>
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Event Image */}
+                <div className="relative h-[250px] md:h-[400px]">
+                  <Image
+                    src={event.image || "/placeholder.svg"}
+                    alt={event.alt}
+                    fill
+                    className="object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
-                <div className="flex items-center text-sm text-muted-foreground mb-3">
-                  <Clock className="h-4 w-4 mr-2 text-primary" />
-                  <span>{event.timing}</span>
-                </div>
-                <p className="text-muted-foreground mb-4 text-sm flex-grow">{event.description}</p>{" "}
-                {/* Added flex-grow to push button down */}
-                {event.link && event.linkText && (
-                  <Button
-                    asChild
-                    className="mt-auto w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground"
-                  >
-                    <Link href={event.link}>{event.linkText}</Link>
-                  </Button>
-                )}
-              </CardContent>
+
+                {/* Event Content */}
+                <CardContent className="p-6 flex flex-col justify-center">
+                  {event.status && (
+                    <Badge variant="secondary" className="absolute top-4 right-4 bg-primary text-primary-foreground">
+                      {event.status}
+                    </Badge>
+                  )}
+                  <CardTitle className="text-2xl font-bold text-foreground mb-3">{event.title}</CardTitle>
+                  <div className="flex items-center text-sm text-muted-foreground mb-1">
+                    <Tag className="h-4 w-4 mr-2 text-primary" />
+                    <span>{event.category}</span>
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground mb-3">
+                    <Clock className="h-4 w-4 mr-2 text-primary" />
+                    <span>{event.timing}</span>
+                  </div>
+                  <p className="text-muted-foreground mb-4 text-sm flex-grow">{event.description}</p>
+                  {event.link && event.linkText && (
+                    <Button
+                      asChild
+                      className="mt-auto w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground"
+                    >
+                      <Link href={event.link}>{event.linkText}</Link>
+                    </Button>
+                  )}
+                </CardContent>
+              </div>
             </Card>
           ))}
         </div>

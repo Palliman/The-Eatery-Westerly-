@@ -56,7 +56,7 @@ export default function Home() {
             <Button
               size="sm"
               variant="outline"
-              className="border-primary text-primary hover:bg-secondary flex-1 text-xs py-1 h-7"
+              className="border-primary text-primary hover:bg-secondary flex-1 text-xs py-1 h-7 bg-transparent"
               asChild
             >
               <Link href="/#contact">Events</Link>
@@ -74,6 +74,12 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="flex-1">
+        {/* Special Events Section */}
+        <section id="events" className="py-12 container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Special Events</h2>
+          <EventCarousel />
+        </section>
+
         {/* About Section */}
         <section id="about" className="py-12 md:py-16 container mx-auto px-4">
           <OurStory />
@@ -240,12 +246,6 @@ export default function Home() {
               </TabsContent>
             </Tabs>
           </div>
-        </section>
-
-        {/* Special Events Section */}
-        <section id="events" className="py-12 container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Special Events</h2>
-          <EventCarousel />
         </section>
 
         {/* Review Carousel */}
