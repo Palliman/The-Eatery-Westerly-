@@ -14,7 +14,7 @@ const events = [
     description:
       "Join us for our popular comfort food nights! We offer a choice of three different meals, typically our favorite comfort foods. Each meal can be complemented with an optional salad or dessert. Pre-orders recommended!",
     timing: "First Monday of each month, 4:00 PM - 7:00 PM",
-    image: "/comfort-food-menu-dec-1.png",
+    image: "/comfort-food-night-dec-2025.png",
     alt: "Comfort Food Night menu featuring meatloaf, lasagna, and pork ribs",
     category: "Monthly Special",
     link: "tel:+14013150777",
