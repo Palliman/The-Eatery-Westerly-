@@ -30,56 +30,14 @@ export default function Home() {
       {/* Hero Section with Video Background */}
       <VideoHero className="pt-16 md:pt-20" />
 
-      {/* Quick Access Bar - More compact */}
-      <div className="sticky top-12 md:top-16 z-30 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm py-1 px-4">
-        <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-center gap-1 md:gap-0">
-          <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 text-center sm:text-left">
-            <div className="flex items-center text-xs">
-              <MapPin className="h-3 w-3 mr-1 text-primary" />
-              <Link
-                href="https://maps.google.com/?q=Merchant+Square,+55+Beach+Street,+Westerly,+RI"
-                className="hover:underline text-foreground"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                55 Beach St, Westerly, RI
-              </Link>
-            </div>
-            <div className="flex items-center text-xs">
-              <Phone className="h-3 w-3 mr-1 text-primary" />
-              <Link href="tel:+14013150777" className="hover:underline text-foreground">
-                (401) 315-0777
-              </Link>
-            </div>
-          </div>
-          <div className="flex flex-row gap-1 w-full md:hidden">
-            <Button
-              size="sm"
-              variant="outline"
-              className="border-primary text-primary hover:bg-secondary flex-1 text-xs py-1 h-7 bg-transparent"
-              asChild
-            >
-              <Link href="/#contact">Events</Link>
-            </Button>
-            <Button
-              size="sm"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground flex-1 text-xs py-1 h-7"
-              asChild
-            >
-              <Link href="tel:+14013150777">Call for Pick Up</Link>
-            </Button>
-          </div>
-        </div>
-      </div>
+      {/* Special Events Section */}
+      <section id="events" className="py-12 container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Special Events</h2>
+        <EventCarousel />
+      </section>
 
       {/* Main Content */}
       <main className="flex-1">
-        {/* Special Events Section */}
-        <section id="events" className="py-12 container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Special Events</h2>
-          <EventCarousel />
-        </section>
-
         {/* About Section */}
         <section id="about" className="py-12 md:py-16 container mx-auto px-4">
           <OurStory />
