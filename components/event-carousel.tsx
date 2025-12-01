@@ -19,6 +19,7 @@ const events = [
     category: "Monthly Special",
     link: "tel:+14013150777",
     linkText: "Call to Pre-order",
+    status: "Tonight",
   },
   {
     title: "Fish & Chips Fridays",
@@ -73,12 +74,12 @@ export default function EventCarousel() {
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Event Image */}
                 {event.image && (
-                  <div className="relative h-[250px] md:h-[400px]">
+                  <div className="relative h-[300px] md:h-[400px] bg-muted">
                     <Image
                       src={event.image || "/placeholder.svg"}
                       alt={event.alt}
                       fill
-                      className="object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
+                      className="object-contain rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
