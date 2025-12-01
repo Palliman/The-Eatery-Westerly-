@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 215 40% 30%;
+    --foreground: 44 37% 90%;
+    --card: 215 40% 35%;
+    --card-foreground: 44 37% 90%;
+    --popover: 215 40% 35%;
+    --popover-foreground: 44 37% 90%;
+    --primary: 44 37% 90%;
+    --primary-foreground: 215 40% 30%;
+    --secondary: 215 40% 25%;
+    --secondary-foreground: 44 37% 90%;
+    --muted: 215 40% 35%;
+    --muted-foreground: 44 37% 80%;
+    --accent: 215 40% 35%;
+    --accent-foreground: 44 37% 90%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 44 37% 90%;
+    --border: 215 40% 35%;
+    --input: 215 40% 35%;
+    --ring: 44 37% 90%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 215 40% 20%;
+    --foreground: 44 37% 90%;
+    --card: 215 40% 20%;
+    --card-foreground: 44 37% 90%;
+    --popover: 215 40% 20%;
+    --popover-foreground: 44 37% 90%;
+    --primary: 44 37% 90%;
+    --primary-foreground: 215 40% 20%;
+    --secondary: 215 40% 25%;
+    --secondary-foreground: 44 37% 90%;
+    --muted: 215 40% 25%;
+    --muted-foreground: 44 37% 80%;
+    --accent: 215 40% 25%;
+    --accent-foreground: 44 37% 90%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 44 37% 90%;
+    --border: 215 40% 25%;
+    --input: 215 40% 25%;
+    --ring: 44 37% 90%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Georgia", serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+/* Mobile Menu Optimizations */
+@media (max-width: 768px) {
+  .menu-tabs [role="tablist"] {
+    gap: 2px;
+    margin-bottom: 0; /* Remove margin since we're adding background */
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    padding-top: 1.25rem;
+    min-height: 4.5rem; /* Reduced height */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-tabs [role="tab"] {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.3rem;
+    min-height: 2rem; /* Reduced height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.1;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    overflow: visible;
+  }
+
+  .menu-tabs [role="tab"] span:first-child {
+    position: relative;
+    z-index: 10;
+  }
+
+  .menu-tabs [role="tabpanel"] {
+    margin-top: 1.5rem; /* Reduced since background provides separation */
+  }
+
+  .menu-section-content {
+    padding: 1rem 0.5rem;
+  }
+
+  .menu-item-card {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .menu-item-title {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+
+  .menu-item-description {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .menu-item-price {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+
+/* Prevent text overflow on small screens */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .menu-tabs [role="tablist"] {
+    min-height: 5rem; /* Slightly increased for very small screens */
+    /* Explicitly set all paddings to ensure consistency and override */
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 1.25rem; /* Maintain for badge visibility */
+    padding-bottom: 0.75rem; /* Standard bottom padding */
+  }
+
+  .menu-tabs [role="tab"] {
+    font-size: 0.65rem;
+    padding: 0.4rem 0.15rem; /* Adjusted padding for very small screens */
+    min-height: 2.6rem; /* INCREASED: Adjusted min-height for better touch and text wrapping */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2; /* INCREASED: For better wrapped text readability */
+    flex: 1 1 auto; /* CHANGED: Allow more natural sizing */
+    min-width: 0;
+    position: relative;
+    overflow: visible; /* Ensure badge and text are not clipped */
+    /* Removed white-space: nowrap, text-overflow: ellipsis to allow wrapping */
+  }
+
+  .menu-tabs [role="tabpanel"] {
+    margin-top: 1.5rem; /* Keep consistent with larger mobile */
+  }
+}
+
+/* Desktop menu tabs - keep original styling */
+@media (min-width: 769px) {
+  .menu-tabs [role="tablist"] {
+    background: hsl(var(--card));
+    border: none;
+    padding: 0;
+    min-height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .menu-tabs [role="tabpanel"] {
+    margin-top: 2.5rem;
+  }
+}
+
+/* Additional spacing for menu sections */
+.menu-section-spacing {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .menu-section-spacing {
+    margin-top: 2.5rem;
+  }
+}
+
+/* Mobile Touch Spacing Improvements */
+@media (max-width: 768px) {
+  /* Increase spacing for buttons and links */
+  .button,
+  button,
+  [role="button"],
+  a {
+    padding-top: 0.85rem; /* Increased from 0.5rem or similar */
+    padding-bottom: 0.85rem; /* Increased from 0.5rem or similar */
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+  }
+
+  /* Specific adjustments for header buttons if needed */
+  header .button,
+  header button,
+  header [role="button"],
+  header a {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Ensure menu tabs have enough touch area and spacing */
+  .menu-tabs [role="tablist"] {
+    gap: 4px; /* Add more gap between tabs */
+  }
+
+  .menu-tabs [role="tab"] {
+    padding: 0.5rem 0.4rem; /* Adjusted padding */
+    min-height: 2.25rem; /* Adjusted minimum height */
+  }
+
+  /* Add more vertical spacing between menu items */
+  .menu-item-card {
+    padding-bottom: 1rem; /* Increase bottom padding */
+    margin-bottom: 1rem; /* Increase bottom margin */
+  }
+
+  /* Increase spacing for carousel controls */
+  .relative .absolute[class*="left-"],
+  .relative .absolute[class*="right-"] {
+    /* Example: Make control buttons larger or add more space around them */
+    /* This is a generic selector, you might need to be more specific */
+    padding: 0.5rem; /* Increase padding around icons */
+  }
+  .relative .absolute[class*="left-"] {
+    left: 0.75rem; /* Increase space from edge */
+  }
+  .relative .absolute[class*="right-"] {
+    right: 0.75rem; /* Increase space from edge */
+  }
+
+  /* Footer links spacing */
+  footer .flex-wrap a {
+    padding: 0.5rem;
+  }
+}
