@@ -13,8 +13,8 @@ const events = [
     title: "Monthly Comfort Food Night",
     description:
       "Join us for our popular comfort food nights! We offer a choice of three different meals, typically our favorite comfort foods. Each meal can be complemented with an optional salad or dessert. Pre-orders recommended!",
-    timing: "First Monday of each month, 4:00 PM - 7:00 PM",
-    image: "/comfort-food-night-dec-2025.png",
+    timing: "Tonight at 4pm-7pm",
+    image: "/images/image.png",
     alt: "Comfort Food Night menu featuring meatloaf, lasagna, and pork ribs",
     category: "Monthly Special",
     link: "tel:+14013150777",
@@ -25,7 +25,7 @@ const events = [
     description:
       "Enjoy our signature Fish & Chips, made with premium Atlantic haddock in a crispy batter. Served with hand-cut fries, house-made tartar sauce, and coleslaw. A true Friday tradition!",
     timing: "Every Friday, 11 AM - 2 PM & 4 PM - 7 PM",
-    image: "/carousel-fish-fridays.png",
+    image: null,
     alt: "Delicious platter of Fish and Chips, a Friday special at The Eatery",
     category: "Weekly Special",
     link: "/#menu?category=dinner",
@@ -36,7 +36,7 @@ const events = [
     description:
       "Exciting news! We're working on a brand new dedicated To-Go Station for quick and easy pick-ups of your favorite Eatery meals. Stay tuned for the official launch date!",
     timing: "Coming Soon!",
-    image: "/carousel-togo-station.png",
+    image: null,
     alt: "Concept image for The Eatery's new to-go station",
     category: "New Feature",
     status: "Coming Soon",
@@ -72,18 +72,20 @@ export default function EventCarousel() {
             <Card key={index} className="min-w-full bg-card border-border">
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Event Image */}
-                <div className="relative h-[250px] md:h-[400px]">
-                  <Image
-                    src={event.image || "/placeholder.svg"}
-                    alt={event.alt}
-                    fill
-                    className="object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+                {event.image && (
+                  <div className="relative h-[250px] md:h-[400px]">
+                    <Image
+                      src={event.image || "/placeholder.svg"}
+                      alt={event.alt}
+                      fill
+                      className="object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                )}
 
                 {/* Event Content */}
-                <CardContent className="p-6 flex flex-col justify-center">
+                <CardContent className={`p-6 flex flex-col justify-center ${!event.image ? "md:col-span-2" : ""}`}>
                   {event.status && (
                     <Badge variant="secondary" className="absolute top-4 right-4 bg-primary text-primary-foreground">
                       {event.status}
