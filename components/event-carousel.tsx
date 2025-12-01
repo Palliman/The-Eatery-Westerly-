@@ -70,7 +70,12 @@ export default function EventCarousel() {
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {events.map((event, index) => (
-            <Card key={index} className="min-w-full bg-card border-border">
+            <Card key={index} className="min-w-full bg-card border-border relative">
+              {event.status && (
+                <Badge variant="secondary" className="absolute top-4 right-4 bg-primary text-primary-foreground z-10">
+                  {event.status}
+                </Badge>
+              )}
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Event Image */}
                 {event.image && (
@@ -87,11 +92,6 @@ export default function EventCarousel() {
 
                 {/* Event Content */}
                 <CardContent className={`p-6 flex flex-col justify-center ${!event.image ? "md:col-span-2" : ""}`}>
-                  {event.status && (
-                    <Badge variant="secondary" className="absolute top-4 right-4 bg-primary text-primary-foreground">
-                      {event.status}
-                    </Badge>
-                  )}
                   <CardTitle className="text-2xl font-bold text-foreground mb-3">{event.title}</CardTitle>
                   <div className="flex items-center text-sm text-muted-foreground mb-1">
                     <Tag className="h-4 w-4 mr-2 text-primary" />
