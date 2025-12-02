@@ -13,13 +13,13 @@ const events = [
     title: "Monthly Comfort Food Night",
     description:
       "Join us for our popular comfort food nights! We offer a choice of three different meals, typically our favorite comfort foods. Each meal can be complemented with an optional salad or dessert. Pre-orders recommended!",
-    timing: "Tonight at 4pm-7pm",
+    timing: "First of each month",
     image: "/images/image.png",
-    alt: "Comfort Food Night menu featuring meatloaf, lasagna, and pork ribs",
+    alt: "Comfort food dishes including meatloaf, ribs, and lasagna by the fireplace",
     category: "Monthly Special",
     link: "tel:+14013150777",
     linkText: "Call to Pre-order",
-    status: "Tonight",
+    status: "Monthly Special",
   },
   {
     title: "Fish & Chips Fridays",
