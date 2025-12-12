@@ -14,7 +14,7 @@ const events = [
     description:
       "Join us for our popular comfort food nights! We offer a choice of three different meals, typically our favorite comfort foods. Each meal can be complemented with an optional salad or dessert. Pre-orders recommended!",
     timing: "First of each month",
-    image: "/images/image.png",
+    image: "/images/comfort-food-fireplace.png",
     alt: "Comfort food dishes including meatloaf, ribs, and lasagna by the fireplace",
     category: "Monthly Special",
     link: "tel:+14013150777",
@@ -26,7 +26,7 @@ const events = [
     description:
       "Enjoy our signature Fish & Chips, made with premium Atlantic haddock in a crispy batter. Served with hand-cut fries, house-made tartar sauce, and coleslaw. A true Friday tradition!",
     timing: "Every Friday, 11 AM - 2 PM & 4 PM - 7 PM",
-    image: "/images/image.png",
+    image: "/images/fish-chips-friday.png",
     alt: "Delicious platter of Fish and Chips, a Friday special at The Eatery",
     category: "Weekly Special",
     link: "/#menu?category=dinner",
