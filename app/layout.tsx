@@ -21,6 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://awards.infcdn.net/2024/circle_v2.css" rel="stylesheet" />
+      </head>
       <body className={inter.className}>
         {IS_MAINTENANCE_MODE && <MaintenanceOverlay />}
         <AuthProvider>
