@@ -17,6 +17,7 @@ import LocalBusinessSEO from "@/components/local-business-seo"
 import FaqSchema from "@/components/faq-schema"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import OrganizationSchema from "@/components/organization-schema"
+import RestaurantGuruBadge from "@/components/restaurant-guru-badge"
 
 export default function Home() {
   return (
@@ -211,6 +212,10 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-8 text-foreground">What Our Customers Say</h2>
             <ReviewCarousel />
+            {/* Restaurant Guru Badge */}
+            <div className="flex justify-center mt-8">
+              <RestaurantGuruBadge />
+            </div>
           </div>
         </section>
 
