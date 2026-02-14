@@ -10,18 +10,6 @@ import Link from "next/link"
 
 const events = [
   {
-    title: "Monthly Comfort Food Night",
-    description:
-      "Join us for our popular comfort food nights! We offer a choice of three different meals, typically our favorite comfort foods. Each meal can be complemented with an optional salad or dessert. Pre-orders recommended!",
-    timing: "First of each month",
-    image: "/images/comfort-food-fireplace.png",
-    alt: "Comfort food dishes including meatloaf, ribs, and lasagna by the fireplace",
-    category: "Monthly Special",
-    link: "tel:+14013150777",
-    linkText: "Call to Pre-order",
-    status: "Monthly Special",
-  },
-  {
     title: "Fish & Chips Special",
     description:
       "🐟 Fish & Chips Special - Join us Wednesday, February 18th | 11:00 AM – 2:00 PM for our Fish & Chips special!\n\nDuring Lent, enjoy:\n✅ Fish & Chips — Every Friday\n• 11:00 AM – 2:00 PM\n• 4:00 PM – 7:00 PM\n\n🐟 Whole Bellies — Select Fridays Only\nWe will be serving Whole Bellies on:\n• Friday the 27th\n• Friday the 13th\n\nMark your calendars and come hungry! 🍽️",
@@ -32,6 +20,18 @@ const events = [
     link: "tel:+14013150777",
     linkText: "Call to Pre-order",
     status: "Featured",
+  },
+  {
+    title: "Monthly Comfort Food Night",
+    description:
+      "Join us for our popular comfort food nights! We offer a choice of three different meals, typically our favorite comfort foods. Each meal can be complemented with an optional salad or dessert. Pre-orders recommended!",
+    timing: "First of each month",
+    image: "/images/comfort-food-fireplace.png",
+    alt: "Comfort food dishes including meatloaf, ribs, and lasagna by the fireplace",
+    category: "Monthly Special",
+    link: "tel:+14013150777",
+    linkText: "Call to Pre-order",
+    status: "Monthly Special",
   },
   {
     title: "To-Go Station Launch",
