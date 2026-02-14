@@ -10,6 +10,18 @@ import Link from "next/link"
 
 const events = [
   {
+    title: "Fish & Chips Special",
+    description:
+      "🐟 Fish & Chips Special - Join us Wednesday, February 18th | 11:00 AM – 2:00 PM for our Fish & Chips special!\n\nDuring Lent, enjoy:\n✅ Fish & Chips — Every Friday\n• 11:00 AM – 2:00 PM\n• 4:00 PM – 7:00 PM\n\n🐟 Whole Bellies — Select Fridays Only\nWe will be serving Whole Bellies on:\n• Friday the 27th\n• Friday the 13th\n\nMark your calendars and come hungry! 🍽️",
+    timing: "Wednesday, February 18th & Every Friday during Lent",
+    image: "/fish-chips-special-lent.png",
+    alt: "Fish & Chips Special promotional image featuring fish, whole bellies, and meal times",
+    category: "Lent Special",
+    link: "tel:+14013150777",
+    linkText: "Call to Pre-order",
+    status: "Featured",
+  },
+  {
     title: "Monthly Comfort Food Night",
     description:
       "Join us for our popular comfort food nights! We offer a choice of three different meals, typically our favorite comfort foods. Each meal can be complemented with an optional salad or dessert. Pre-orders recommended!",
@@ -20,17 +32,6 @@ const events = [
     link: "tel:+14013150777",
     linkText: "Call to Pre-order",
     status: "Monthly Special",
-  },
-  {
-    title: "Fish & Chips Fridays",
-    description:
-      "Enjoy our signature Fish & Chips, made with premium Atlantic haddock in a crispy batter. Served with hand-cut fries, house-made tartar sauce, and coleslaw. A true Friday tradition!",
-    timing: "Every Friday, 11 AM - 2 PM & 4 PM - 7 PM",
-    image: "/images/fish-chips-friday.png",
-    alt: "Delicious platter of Fish and Chips, a Friday special at The Eatery",
-    category: "Weekly Special",
-    link: "/#menu?category=dinner",
-    linkText: "View Menu",
   },
   {
     title: "To-Go Station Launch",
