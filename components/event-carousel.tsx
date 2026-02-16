@@ -12,7 +12,7 @@ const events = [
   {
     title: "Fish & Chips Special",
     description:
-      "🐟 Fish & Chips Special - Join us Wednesday, February 18th | 11:00 AM – 2:00 PM for our Fish & Chips special!\n\nDuring Lent, enjoy:\n✅ Fish & Chips — Every Friday\n• 11:00 AM – 2:00 PM\n• 4:00 PM – 7:00 PM\n\n🐟 Whole Bellies — Select Fridays Only\nWe will be serving Whole Bellies on:\n• Friday the 27th\n• Friday the 13th\n\nMark your calendars and come hungry! 🍽️",
+      "🐟 Fish & Chips Special - Join us Wednesday, February 18th | 11:00 AM – 2:00 PM for our Fish & Chips special!\n\nDuring Lent, enjoy:\n✅ Fish & Chips — Every Friday\n• 11:00 AM – 2:00 PM\n• 4:00 PM – 7:00 PM\n\n🐟 Whole Bellies — Select Fridays Only\nWe will be serving Whole Bellies on:\n• Friday Feb the 27th\n• Friday March 13th\n• Friday March 27th\n• Friday April 10th\n\nMark your calendars and come hungry! 🍽️",
     timing: "Wednesday, February 18th & Every Friday during Lent",
     image: "/fish-chips-special-lent.png",
     alt: "Fish & Chips Special promotional image featuring fish, whole bellies, and meal times",
