@@ -204,8 +204,8 @@
   button,
   [role="button"],
   a {
-    padding-top: 0.85rem; /* Increased from 0.5rem or similar */
-    padding-bottom: 0.85rem; /* Increased from 0.5rem or similar */
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
     margin-top: 0.35rem;
     margin-bottom: 0.35rem;
   }
@@ -223,32 +223,30 @@
 
   /* Ensure menu tabs have enough touch area and spacing */
   .menu-tabs [role="tablist"] {
-    gap: 4px; /* Add more gap between tabs */
+    gap: 4px;
   }
 
   .menu-tabs [role="tab"] {
-    padding: 0.5rem 0.4rem; /* Adjusted padding */
-    min-height: 2.25rem; /* Adjusted minimum height */
+    padding: 0.5rem 0.4rem;
+    min-height: 2.25rem;
   }
 
   /* Add more vertical spacing between menu items */
   .menu-item-card {
-    padding-bottom: 1rem; /* Increase bottom padding */
-    margin-bottom: 1rem; /* Increase bottom margin */
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
   }
 
   /* Increase spacing for carousel controls */
   .relative .absolute[class*="left-"],
   .relative .absolute[class*="right-"] {
-    /* Example: Make control buttons larger or add more space around them */
-    /* This is a generic selector, you might need to be more specific */
-    padding: 0.5rem; /* Increase padding around icons */
+    padding: 0.5rem;
   }
   .relative .absolute[class*="left-"] {
-    left: 0.75rem; /* Increase space from edge */
+    left: 0.75rem;
   }
   .relative .absolute[class*="right-"] {
-    right: 0.75rem; /* Increase space from edge */
+    right: 0.75rem;
   }
 
   /* Footer links spacing */
